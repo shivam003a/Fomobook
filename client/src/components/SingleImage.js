@@ -9,7 +9,7 @@ const SingleImage = ()=>{
     const { id } = useParams();
 
     const fetchImage = async ()=>{
-        const res = await fetch(`${id}`, {
+        const res = await fetch(`profile/${id}`, {
             method : "GET",
             headers : {
                 "Content-Type" : "application/json"
