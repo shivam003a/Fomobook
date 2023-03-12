@@ -2,7 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const cookieParser = require('cookie-parser');
 const path = require('path');
-require('./db/conn')
+const connectDB = require('./db/conn')
 
 
 dotenv.config({ path: "./config.env" });
