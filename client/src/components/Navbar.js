@@ -29,7 +29,7 @@ const Navbar = () => {
                         <li><NavLink to='/logout' onClick={hideMenu}>Logout</NavLink></li>
                     </ul>
                 </div>
-                <div className='btn'>
+                <div className='btn submit'>
                     <button onClick={handleNavbar}>Menu</button>
                 </div>
             </div>
