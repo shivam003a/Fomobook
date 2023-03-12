@@ -30,7 +30,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className='btn'>
-                    <button onClick={handleNavbar} className="submit">Menu</button>
+                    <button onClick={handleNavbar} >Menu</button>
                 </div>
             </div>
         </>

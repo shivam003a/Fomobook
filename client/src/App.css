@@ -45,6 +45,14 @@
 .btn{
     display: none;
 }
+.btn button {
+    margin-top: 14px;
+    padding: 10px 24px;
+    cursor: pointer;
+    border: 0;
+    background-color: #96f9a9;
+    border-radius: 18px;
+}
 
 
 
