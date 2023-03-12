@@ -46,7 +46,6 @@
     display: none;
 }
 .btn button {
-    /* margin-top: 14px; */
     padding: 10px 24px;
     cursor: pointer;
     border: 0;
@@ -522,6 +521,7 @@
 }
 .profile-img{
     width: 100%;
+    object-fit: cover;
     height: 230px;
 }
 
@@ -556,8 +556,7 @@
     padding: 4px;
 }
 .model-up img{
-    width: 100%;
-    /* object-fit: cover; */
+    object-fit:contain;
     height: 100%;
 }
 .model-down {
