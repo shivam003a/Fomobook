@@ -2,6 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const cookieParser = require('cookie-parser');
 const path = require('path');
+require('./db/conn')
 
 
 dotenv.config({ path: "./config.env" });
@@ -12,7 +13,6 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 
-require('./db/conn')
 
 app.use(express.static(path.join(__dirname, "./client/build")));
 
@@ -28,6 +28,16 @@ app.get("/", function (_, res) {
 app.use(require('./router/auth'))
 
 
-app.listen(PORT, () => {
-    console.log(`Server is up & running at port ${PORT}`);
-});
+const start = async () => {
+  try {
+      await connectDB();
+      app.listen(PORT, () => {
+          console.log(`Server is running on port ${PORT}.`);
+      });
+  } catch (error) {
+      console.log(error);
+      console.log("Failed to connect to the database, server is not running.");
+  }
+};
+
+start();
